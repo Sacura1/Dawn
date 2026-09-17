@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dawn — Card preview</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { background: #f4f6f8; color: #15171a; display: grid; font-family: Arial, sans-serif; margin: 0; min-height: 100vh; place-items: center; }
+      .tweet { background: white; border: 1px solid #dfe3e7; border-radius: 18px; box-shadow: 0 18px 60px rgba(20,28,38,.1); padding: 20px; width: 560px; }
+      .tweet header { align-items: center; display: flex; gap: 10px; margin-bottom: 11px; }
+      .avatar { background: #ff6b57; border-radius: 50%; height: 38px; width: 38px; }
+      .tweet strong { font-size: 14px; }
+      .tweet small { color: #68717a; display: block; }
+      .tweet p { font-size: 16px; line-height: 1.45; margin: 0 0 10px; }
+      #lens-host { display: inline; font: inherit; line-height: inherit; }
+    </style>
+  </head>
+  <body>
+    <article class="tweet">
+      <header><span class="avatar"></span><div><strong>Onchain Notes</strong><small>@signalwatch</small></div></header>
+      <p>Watching <span id="lens-host"></span> after today’s flow shift. Hover the marked token to read the chain without leaving the post.</p>
+    </article>
+    <script type="module">
+      await import("/src/dev/chromeMock.ts");
+      await import("/src/dev/CardPreview.tsx");
+    </script>
+  </body>
+</html>

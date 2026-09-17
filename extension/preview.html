@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dawn — Popup preview</title>
+    <style>
+      body { background: #dfe3e7; display: grid; min-height: 100vh; margin: 0; place-items: center; }
+      #root { box-shadow: 0 18px 60px rgba(20,28,38,.18); }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      await import("/src/dev/chromeMock.ts");
+      await import("/src/popup/main.tsx");
+    </script>
+  </body>
+</html>
